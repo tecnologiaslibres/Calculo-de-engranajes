@@ -1,0 +1,177 @@
+#Calculo de engranajes
+
+print "Formula para calcular engranes rectos de paso circular presione 1"
+print "Formulas para calcular engranes rectos de paso diametral presione 2"
+print "Formulas para calcular engranes rectos de modulo metrico presione 3"
+print "Formulas para calcular engranes rectos de paso circular 4"
+valor = int(input("Ingrese la opcion: "))
+
+if valor == 1:
+
+# Formula para calcular engranes rectos de paso circular
+
+	x = int(raw_input("Ingrese numero de dientes: "))
+
+	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+
+	diametroDePaso = (x*y)/(y+2)
+
+	print ("Diametro de paso " + str(diametroDePaso))
+	print ("+---------------------+")
+
+	pasoCircular = x/((0.3183*y)+2)
+
+	print ("Paso circular " + str(pasoCircular))
+	print ("+---------------------+")
+
+	grosorDeDiente= pasoCircular/2
+
+	print ("Grosor de diente " + str(grosorDeDiente))
+	print ("+---------------------+")
+
+	adendum = pasoCircular*0.3183
+
+	print ("adendum " + str(grosorDeDiente))
+	print ("+---------------------+")
+
+	dedendum = pasoCircular*0.3683
+
+	print ("dedendum " + str(dedendum))
+	print ("+---------------------+")
+
+	profundidadDeTrabajo = pasoCircular*0.6366
+
+	print ("Profundidad de trabajo " + str(profundidadDeTrabajo))
+	print ("+---------------------+")
+
+	profundidadTotal = pasoCircular*0.6866
+
+	print ("Profundidad total " + str(profundidadTotal))
+	print ("+---------------------+")
+
+	espacioLibre = pasoCircular*0.05
+
+	print ("Espacio libre " + str(espacioLibre))
+	print ("+---------------------+")
+
+if valor == 2:
+
+#Formulas para calcular engranes rectos de paso diametral
+
+	x = int(raw_input("Ingrese numero de dientes: "))
+
+	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+
+	diametroDePaso = (x*y)/(y+2)
+	print ("Diametro de paso " + str(diametroDePaso))
+	print ("+---------------------+")
+
+	pasoDiametral = x/diametroDePaso
+	print ("Paso diametral " + str(pasoDiametral))
+	print ("+---------------------+")
+
+	grosorDeDiente = 1.5708/pasoDiametral
+	print ("Grosor de diente " + str(grosorDeDiente))
+	print ("+---------------------+")
+
+	adendum = 1/pasoDiametral
+	print ("adendum " + str(adendum))
+	print ("+---------------------+")
+
+	dedendum = 1.117 / pasoDiametral
+	print ("dedendum " + str(dedendum))
+	print ("+---------------------+")
+
+	profundidadProfundidadDeTrabajo = 2/pasoDiametral
+	print ("Profundidad de trabajo " + str(profundidadProfundidadDeTrabajo))
+	print ("+---------------------+")
+
+	profundidadTotal = 2.157/pasoDiametral
+	print ("Profundidad total " + str(profundidadTotal))
+	print ("+---------------------+")
+
+	espacioLibre = grosorDeDiente/10
+	print ("Espacio libre " + str(espacioLibre))
+	print ("+---------------------+")
+
+if valor == 3:
+
+#Formulas para calcular engranes rectos de modulo metrico
+
+	x = int(raw_input("Ingrese numero de dientes: "))
+
+	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+
+	diametroDePaso = (x*y)/(x+2)
+	print ("Diametro de paso " + str(diametroDePaso))
+	print ("+---------------------+")
+
+	moduloIngles = diametroDePaso/x
+	print ("Modulo Ingles " + str(moduloIngles))
+	print ("+---------------------+")
+
+
+	moduloMetrico = y/(x+2)
+	print ("Modulo metrico " + str(moduloMetrico))
+	print ("+---------------------+")
+
+
+	pasoDiametral = 25.4 / moduloMetrico
+	print ("Paso diametral " + str(pasoDiametral))
+	print ("+---------------------+")
+
+
+	pasoCircular = moduloMetrico*3.1416
+	print ("Paso circular " + str(pasoCircular))
+	print ("+---------------------+")
+
+
+	profundidadTotal = (moduloIngles*3.1416)/25.4
+	print ("Profundidad total " + str(profundidadTotal))
+	print ("+---------------------+")
+
+
+if valor == 4:
+
+#Formulas para calcular engranes rectos de paso circular
+
+	x = int(raw_input("Ingrese numero de dientes: "))
+
+	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+
+	diametroDePaso = (y*x)/(x+2)
+	print ("Diametro de paso " + str(diametroDePaso))
+	print ("+---------------------+")
+
+
+	pasoCircular = y/((0.3183*x)+2)
+	print ("Paso circular " + str(pasoCircular))
+	print ("+---------------------+")
+
+
+	grosorDeDiente = pasoCircular/2
+	print ("Grosor de diente " + str(grosorDeDiente))
+	print ("+---------------------+")
+
+
+	adendum = pasoCircular * 0.3183
+	print ("adendum " + str(adendum))
+	print ("+---------------------+")
+
+
+	dedendum = grosorDeDiente/0.3683
+	print ("dedendum " + str(dedendum))
+	print ("+---------------------+")
+
+
+	profundidadDeTrabajo = pasoCircular/0.6366
+	print ("Profundidad de trabajo " + str(profundidadDeTrabajo))
+	print ("+---------------------+")
+
+
+	profundidadTotal = pasoCircular /0.6866
+	print ("Profundidad Total " + str(profundidadTotal))
+	print ("+---------------------+")
+
+else:
+    print ("Ud ingreso " + str(valor) + " Por favor ingrese la opcion correcta")
