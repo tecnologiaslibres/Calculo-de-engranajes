@@ -1,4 +1,5 @@
-#Calculo de engranajes
+# Escrito por Mauro Javier Silva, año 2015
+# Calculo de engranajes
 
 print "Formula para calcular engranes rectos de paso circular presione 1"
 print "Formulas para calcular engranes rectos de paso diametral presione 2"
