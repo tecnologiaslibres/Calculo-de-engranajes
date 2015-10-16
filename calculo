@@ -8,11 +8,21 @@ valor = int(input("Ingrese la opcion: "))
 
 if valor == 1:
 
-# Formula para calcular engranes rectos de paso circular
+	# Formula para calcular engranes rectos de paso circular
 
-	x = int(raw_input("Ingrese numero de dientes: "))
+	while True:
+		try:
+			x = float(raw_input("Ingrese numero de dientes: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
-	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+	while True:
+		try:
+			y = float(raw_input("Ingrese diametro externo expresado en mm: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
 	diametroDePaso = (x*y)/(y+2)
 
@@ -58,14 +68,23 @@ if valor == 2:
 
 #Formulas para calcular engranes rectos de paso diametral
 
-	x = int(raw_input("Ingrese numero de dientes: "))
+	while True:
+		try:
+			x = float(raw_input("Ingrese numero de dientes: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
-	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+	while True:
+		try:
+			y = float(raw_input("Ingrese diametro externo expresado en mm: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
 	diametroDePaso = (x*y)/(y+2)
 	print ("Diametro de paso " + str(diametroDePaso))
 	print ("+---------------------+")
-
 	pasoDiametral = x/diametroDePaso
 	print ("Paso diametral " + str(pasoDiametral))
 	print ("+---------------------+")
@@ -98,9 +117,19 @@ if valor == 3:
 
 #Formulas para calcular engranes rectos de modulo metrico
 
-	x = int(raw_input("Ingrese numero de dientes: "))
+	while True:
+		try:
+			x = float(raw_input("Ingrese numero de dientes: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
-	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+	while True:
+		try:
+			y = float(raw_input("Ingrese diametro externo expresado en mm: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
 	diametroDePaso = (x*y)/(x+2)
 	print ("Diametro de paso " + str(diametroDePaso))
@@ -135,9 +164,20 @@ if valor == 4:
 
 #Formulas para calcular engranes rectos de paso circular
 
-	x = int(raw_input("Ingrese numero de dientes: "))
+	while True:
+		try:
+			x = float(raw_input("Ingrese numero de dientes: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
 
-	y = int(raw_input("Ingrese diametro externo expresado en mm: "))
+	while True:
+		try:
+			y = float(raw_input("Ingrese diametro externo expresado en mm: "))
+			break
+		except ValueError:
+			print "Tiene que ingresar un valor numerico"
+
 
 	diametroDePaso = (y*x)/(x+2)
 	print ("Diametro de paso " + str(diametroDePaso))
@@ -174,4 +214,7 @@ if valor == 4:
 	print ("+---------------------+")
 
 else:
-    print ("Ud ingreso " + str(valor) + " Por favor ingrese la opcion correcta")
+	print ("Ud ingreso " + str(valor) + " Por favor ingrese la opcion correcta")
+
+	  
+
